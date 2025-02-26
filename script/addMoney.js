@@ -7,14 +7,22 @@ document
     const mainBalance = parseFloat(
       document.getElementById("main-balance").innerText
     );
-    if (amount && pin) {
-      if (pin === 1234) {
-        const sum = mainBalance + amount;
-        document.getElementById("main-balance").innerText = sum;
+    const bankSelect = document.getElementById("select-bank").value;
+    const acNum = document.getElementById("ac-num").value;
+    console.log(bankSelect);
+    if (bankSelect !== "Select a bank") {
+      if (acNum.length !== 0) {
+        if (pin === 1234) {
+          const sum = mainBalance + amount;
+          document.getElementById("main-balance").innerText = sum;
+          alert(`Added money successfully.Your current balance is ${sum}`);
+        } else {
+          alert("Plz enter 1234 as a pin.");
+        }
       } else {
-        alert("Plz enter 1234 as a pin.");
+        alert("Enter a account number.");
       }
     } else {
-      alert("Enter amount & pin");
+      alert("Select a bank");
     }
   });
