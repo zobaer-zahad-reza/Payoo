@@ -37,7 +37,7 @@
                     <img class="w-8 mx-auto mb-1" src="assets/money1.png" alt="">
                     <h3 class="text-sm">Transfer Money</h3>
                 </div>
-                <div class="card cursor-pointer border p-4 text-center rounded-xl hover:border-blue-700 hover:bg-blue-200">
+                <div id="bonus-box" class="card cursor-pointer border p-4 text-center rounded-xl hover:border-blue-700 hover:bg-blue-200">
                     <img class="w-8 mx-auto mb-1" src="assets/bonus1.png" alt="">
                     <h3>Get Bonus</h3>
                 </div>
@@ -52,7 +52,7 @@
              </div>
 
              <section>
-                   <!-- add money container -->
+                             <!-- add money container -->
                 <div id="addMoney-container">
                     <h1 class="text-center text-3xl font-extrabold mt-20">Add Money</h1>
                     <div class="hero min-h-screen -mt-16">
@@ -88,18 +88,18 @@
                             <div class="card-body">
                                 <fieldset class="fieldset">
                                 <label class="fieldset-label">Agent Number</label>
-                                <input id="ac-num" type="number" class="input" placeholder="Enter 11 digit number" required/>
+                                <input id="agent-num" type="number" class="input" placeholder="Enter 11 digit number" required />
                                 <label class="fieldset-label">Amount</label>
-                                <input id="amount" type="number" class="input" placeholder="Enter amount to withdraw" required/>
+                                <input id="cashout-amount" type="number" class="input" placeholder="Enter amount to withdraw" required/>
                                 <label class="fieldset-label">PIN Number</label>
-                                <input id="ac-pin" type="password" class="input" placeholder="Enter 4 digit pin number" required>
-                                <button id="add-money-btn" class="btn btn-neutral border-none bg-blue-700 mt-4">Withdraw Money</button>
+                                <input id="cashout-pin" type="password" class="input" placeholder="Enter 4 digit pin number" required>
+                                <button id="cashout-btn" class="btn btn-neutral border-none bg-blue-700 mt-4">Withdraw Money</button>
                                 </fieldset>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- transfer money container -->
+                            <!-- transfer money container -->
                 <div id="transfer-money-container">
                     <h1 class="text-center text-3xl font-extrabold mt-20">Transfer Money</h1>
                     <div class="hero min-h-screen -mt-28">
@@ -118,13 +118,29 @@
                         </div>
                     </div>
                 </div>
+                            <!-- Bonus container -->
+                <div id="Bonus-container">
+                    <h1 class="text-center text-3xl font-extrabold mt-20">Get Bonus</h1>
+                    <div class="hero min-h-screen -mt-52">
+                        <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                            <div class="card-body">
+                                <fieldset class="fieldset">
+                                <label class="fieldset-label">Enter Bonus Coupon</label>
+                                <input id="ac-num" type="text" class="input" placeholder="Enter your coupon" required/>
+                                <button id="add-money-btn" class="btn btn-neutral border-none bg-blue-700 mt-4">Get Bonus</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
              </section>
 
         </section>
 
     </section>
-    <script src="addMoney.js"></script>
-    <script src="toggle.js"></script>
+    <script src="script/addMoney.js"></script>
+    <script src="script/toggle.js"></script>
+    <script src="script/cashout.js"></script>
 </body>
 </html>
 

@@ -15,6 +15,6 @@ document
         alert("Plz enter 1234 as a pin.");
       }
     } else {
-      alert("Enter amount");
+      alert("Enter amount & pin");
     }
   });
